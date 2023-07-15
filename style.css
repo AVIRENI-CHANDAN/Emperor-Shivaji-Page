@@ -145,6 +145,9 @@ body {
 .Story-Section .Content-Box p {
     width: min(800px, 100%);
     border: 1px solid transparent;
+}
+
+.Story-Section .Content-Box * {
     z-index: 2;
 }
 
@@ -174,7 +177,16 @@ body {
 .Afzal-Khan::before,
 .Panhala-Sieze::before,
 .Battle-Pavan-Khind::before,
-.Commemorations::before {
+.Mughal-Conflicts::before,
+.Chakan-Battle::before,
+.Surat-Battle::before,
+.Arrest-Agra::before,
+.Reconquest::before,
+.Commemorations::before,
+.Purandar-Battle::before,
+.Purandar-Trearty::before,
+.Expanding-South::before,
+.Coronation::before {
     content: '';
     position: absolute;
     top: 0;
@@ -182,6 +194,19 @@ body {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .6);
+    z-index: 0;
+}
+
+.Sinhagad-Battle::before,
+.Battle-Umrani-Nesari::before,
+.Death-Succession::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
     z-index: 0;
 }
 
@@ -209,9 +234,80 @@ body {
     background-size: cover;
 }
 
+.Mughal-Conflicts {
+    position: relative;
+    background: scroll url('images/shivaji\ with\ mughals.webp') center center;
+    background-size: cover;
+}
+
+.Chakan-Battle {
+    position: relative;
+    background: fixed url('images/battle-chakan.jpg') center center;
+    background-size: cover;
+}
+
+.Surat-Battle {
+    position: relative;
+    background: fixed url('images/battle-surat.jpg') center center;
+    background-size: cover;
+}
+
+.Sinhagad-Battle {
+    position: relative;
+    background: fixed url('images/Battle-Sinhagad.jpg') center top;
+    background-size: cover;
+}
+
+.Purandar-Battle {
+    position: relative;
+    background: fixed url('images/battle-purandar.jpg') center center;
+    background-size: cover;
+}
+
+.Purandar-Trearty {
+    position: relative;
+    background: scroll url('images/purandar-treaty.jpg') center center;
+    background-size: cover;
+}
+
+.Arrest-Agra {
+    position: relative;
+    background: fixed url('images/agra-fort-escape.webp') center center;
+    background-size: cover;
+}
+
+.Reconquest {
+    position: relative;
+    background: scroll url('images/reconquest.jpg') center top;
+    background-size: cover;
+}
+
+.Battle-Umrani-Nesari {
+    position: relative;
+    background: fixed url('images/umrani-nesari.jpg') left top;
+    background-size: cover;
+}
+
+.Coronation {
+    position: relative;
+    background: fixed url('images/coronation.jpg') center center;
+    background-size: cover;
+}
+
 .Commemorations {
     position: relative;
     background: fixed url('images/commermorations.jpg') center top;
     background-size: cover;
+}
 
+.Expanding-South {
+    position: relative;
+    background: fixed url('images/towards-south.jpg') center top;
+    background-size: cover;
+}
+
+.Death-Succession {
+    position: relative;
+    background: fixed url('images/death.jpg') center top;
+    background-size: cover;
 }
