@@ -36,6 +36,7 @@ body {
     height: 100%;
     z-index: -1;
     display: flex;
+    border: 2px solid transparent;
 }
 
 .Background-Image-Box .Background-Image-Wrapper {
@@ -44,9 +45,11 @@ body {
 }
 
 .Background-Image-Box .Background-Image-Wrapper img {
-    width: 100vmax;
+    /* width: max(100vmax, 100%); */
+    height: max(100vmax, 100%);
     filter: saturate(1.1) contrast(2) brightness(.75);
 }
+
 
 .Name-Box,
 .Caption-Box {
@@ -94,6 +97,7 @@ body {
     flex: 1 1 100px;
     display: flex;
     align-items: center;
+    width: min(800px, 100%);
 }
 
 
@@ -107,27 +111,107 @@ body {
     filter: saturate(1.1) contrast(2) brightness(.5);
 }
 
-.Early-Life-Box {
+
+.Story-Section {
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
-    background: fixed url('images/shivaji-on-horse.jpg') no-repeat;
-    background-size: cover;
-    background-color: #fff;
-    mix-blend-mode: hard-light;
 }
 
-.Early-Life-Box .Box-Title {
+.Story-Section .Box-Title {
     padding: 0 48px;
-    /* border: 1px solid red; */
     position: relative;
+    border: 1px solid transparent;
 }
 
-.Early-Life-Box .Box-Title::after {
+.Story-Section .Box-Title::after {
     content: '';
     position: absolute;
-    top: 1em;
+    top: 100%;
     left: 0;
     width: 100%;
     border-bottom: 1px solid white;
+}
+
+.Story-Section .Content-Box {
+    padding: 12px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.Story-Section .Content-Box p {
+    width: min(800px, 100%);
+    border: 1px solid transparent;
+    z-index: 2;
+}
+
+.Story-Section .Content-Box .Terms {
+    width: min(700px, 100%);
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+.Story-Section .Content-Box .Terms .Terms-Title {
+    border: 1px solid transparent;
+    width: 100%;
+    text-align: center;
+}
+
+.Story-Section .Content-Box .Terms .Terms-List {
+    list-style: decimal;
+    padding: 0 24px;
+}
+
+.Early-Life-Box {
+    background: fixed url('images/shivaji-on-horse-2.jpg') center center;
+    background-size: cover;
+}
+
+.Bijapur-Sultanate::before,
+.Afzal-Khan::before,
+.Panhala-Sieze::before,
+.Battle-Pavan-Khind::before,
+.Commemorations::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 0;
+}
+
+.Bijapur-Sultanate {
+    position: relative;
+    background: fixed url('images/bhijapur\ conflict.jpg') center top;
+    background-size: cover;
+}
+
+.Afzal-Khan {
+    position: relative;
+    background: fixed url('images/Shivaji\ maharaj\ and\ Afzal.avif') center center;
+    background-size: cover;
+}
+
+.Panhala-Sieze {
+    position: relative;
+    background: scroll url('images/panhala\ sieze.avif') center center;
+    background-size: cover;
+}
+
+.Battle-Pavan-Khind {
+    position: relative;
+    background: fixed url('images/pavan\ khind\ battle.png') center top;
+    background-size: cover;
+}
+
+.Commemorations {
+    position: relative;
+    background: fixed url('images/commermorations.jpg') center top;
+    background-size: cover;
+
 }
