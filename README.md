@@ -18,4 +18,4 @@
 
 ---
 
-> <a href="https://shivaji-maharaj-page-starkster.onrender.com/">Link for deployed page on Render</a>
+> <a href="https://shivaji-maharaj-page-starkster.onrender.com/" target="_blank" rel="noopener noreferrer">Link for deployed page on Render</a>
