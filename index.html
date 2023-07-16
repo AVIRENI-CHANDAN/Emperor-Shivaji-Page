@@ -22,6 +22,7 @@
     <div class="Menu-Container In-Active-Container" id="Menu-Container">
         <div class="Menu-Box">
             <div class="Page-Navigation">
+                <h2>Chapters</h2>
                 <ol class="Page-Links" id="Page-Links">
                 </ol>
             </div>
@@ -818,6 +819,9 @@
     </div>
 
     <script>
+        document.getElementById('Menu-Container-Btn').addEventListener('touchstart', (event) => { toggle_menu(event, 'open'); });
+        document.getElementById('Close-Container-Btn').addEventListener('touchstart', (event) => { toggle_menu(event, 'close'); });
+
         let page_url = document.URL.split('#')[0];
         let page_links_nav_box = document.querySelector('#Page-Links');
         let chapters = {
@@ -854,6 +858,7 @@
             a_ele.innerHTML = chapters[i]["name"];
 
             a_ele.addEventListener('click', rediect);
+            a_ele.addEventListener('focus', rediect);
 
             div_ele.appendChild(a_ele);
             li_ele.appendChild(div_ele);

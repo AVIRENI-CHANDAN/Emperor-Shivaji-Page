@@ -59,6 +59,15 @@ body {
     top: 0;
     position: fixed;
     padding: 6px 12px;
+    margin: 8px;
+}
+
+.Action-Btn:active {
+    box-shadow: 0 0 12px white;
+}
+
+.Action-Btn i {
+    font-size: 1.5em;
 }
 
 .Menu-Container-Btn {
@@ -110,13 +119,22 @@ body {
 .Menu-Container .Menu-Box .Page-Navigation {
     flex: 10;
     overflow: scroll;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.Menu-Container .Menu-Box .Page-Navigation h2 {
+    text-align: center;
+    flex: 0;
 }
 
 .Menu-Container .Menu-Box .Page-Navigation .Page-Links {
+    flex: 1;
     padding: 0 24px;
     display: flex;
     flex-flow: column nowrap;
     gap: 8px;
+    overflow: scroll;
 }
 
 .Menu-Container .Menu-Box .Page-Navigation .Page-Links li {
@@ -230,7 +248,7 @@ body {
 }
 
 .Story-Section .Box-Title {
-    padding: 0 48px;
+    padding: 0 56px;
     position: relative;
     border: 1px solid transparent;
 }
