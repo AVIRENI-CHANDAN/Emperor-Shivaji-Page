@@ -13,9 +13,10 @@ body {
 }
 
 body {
-    /* border: 2px solid blue; */
     height: max(100%, 100vh);
     background-color: #101010;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 @font-face {
@@ -45,16 +46,126 @@ body {
 }
 
 .Background-Image-Box .Background-Image-Wrapper img {
-    /* width: max(100vmax, 100%); */
     height: max(100vmax, 100%);
     filter: saturate(1.1) contrast(2) brightness(.75);
 }
 
+.Action-Btn {
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: whitesmoke;
+    color: black;
+    top: 0;
+    position: fixed;
+    padding: 6px 12px;
+}
 
-.Name-Box,
-.Caption-Box {
-    user-select: none;
-    -webkit-user-select: none;
+.Menu-Container-Btn {
+    left: 0;
+}
+
+.Menu-Container-Btn:hover {
+    background-color: #87ceeb;
+}
+
+.Close-Container-Btn {
+    right: 0;
+}
+
+.Close-Container-Btn:hover {
+    background-color: #c4302b;
+}
+
+.In-Active-Container {
+    display: none;
+}
+
+.Active-Container {
+    display: block;
+}
+
+.Menu-Container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    color: black;
+    z-index: 5;
+    background: #000000bf;
+}
+
+
+.Menu-Container .Menu-Box {
+    position: relative;
+    width: min(500px, 100vw);
+    background: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+.Menu-Container .Menu-Box .Page-Navigation {
+    flex: 10;
+    overflow: scroll;
+}
+
+.Menu-Container .Menu-Box .Page-Navigation .Page-Links {
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+
+.Menu-Container .Menu-Box .Page-Navigation .Page-Links li {
+    position: relative;
+}
+
+.Menu-Container .Menu-Box .Page-Navigation .Page-Links li div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.Menu-Container .Menu-Box .Page-Navigation .Page-Links li div a {
+    text-decoration: none;
+    color: inherit;
+    padding: 12px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.Menu-Container .Menu-Box .Contact-Me {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Menu-Container .Menu-Box .Contact-Me a {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    text-decoration: none;
+    color: inherit;
+}
+
+.Action-Btn,
+.Menu-Container .Menu-Box .Page-Navigation .Page-Links li div a,
+.Menu-Container .Menu-Box .Contact-Me a {
+    transition: box-shadow 0.25s ease-in-out 100ms,
+        background-color 0.25s ease-in-out 100ms;
+}
+
+.Menu-Container .Menu-Box .Page-Navigation .Page-Links li div a:hover,
+.Menu-Container .Menu-Box .Contact-Me a:hover {
+    box-shadow: 1px 4px 2px grey;
 }
 
 .Name-Box {
@@ -186,14 +297,15 @@ body {
 .Purandar-Battle::before,
 .Purandar-Trearty::before,
 .Expanding-South::before,
-.Coronation::before {
+.Coronation::before,
+.After-Shivaji::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: #00000099;
     z-index: 0;
 }
 
@@ -206,7 +318,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: #00000066;
     z-index: 0;
 }
 
@@ -296,7 +408,7 @@ body {
 
 .Commemorations {
     position: relative;
-    background: fixed url('images/commermorations.jpg') center top;
+    background: scroll url('images/commermorations.jpg') center center;
     background-size: cover;
 }
 
@@ -309,5 +421,11 @@ body {
 .Death-Succession {
     position: relative;
     background: fixed url('images/death.jpg') center top;
+    background-size: cover;
+}
+
+.After-Shivaji {
+    position: relative;
+    background: fixed url('images/shivputra-sambhaji-raje.jpg') center top;
     background-size: cover;
 }

@@ -6,11 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emperor Shivaji</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-    <!-- King name -->
-    <div class="Name-Box">
+<body oncontextmenu="return false">
+
+    <div class="Menu-Container-Btn Action-Btn Active-Container" id="Menu-Container-Btn"
+        onclick="toggle_menu(event,'open')">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="Close-Container-Btn Action-Btn In-Active-Container" id="Close-Container-Btn"
+        onclick="toggle_menu(event,'close')">
+        <i class="fa fa-close"></i>
+    </div>
+    <div class="Menu-Container In-Active-Container" id="Menu-Container">
+        <div class="Menu-Box">
+            <div class="Page-Navigation">
+                <ol class="Page-Links" id="Page-Links">
+                </ol>
+            </div>
+            <div class="Contact-Me">
+                <p>For any edit suggestions, please</p>
+                <a href="mailto:avengerspythonmail@gmail.com" target="_blank" rel="noreferrer noopener">Send me
+                    information</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Name-Box" id="Name">
         <h1>Chhatrapati Shivaji Maharaj</h1>
         <div class="Background-Image-Box">
             <div class="Background-Image-Wrapper">
@@ -18,12 +41,12 @@
             </div>
         </div>
     </div>
-    <!-- King caption -->
-    <div class="Caption-Box">
+
+    <div class="Caption-Box" id="Caption">
         <h3>The Lion of the Marata</h3>
     </div>
-    <!-- Intro -->
-    <div class="Intro-Box">
+
+    <div class="Intro-Box" id="Introduction">
         <div class="Background-Image-Box">
             <div class="Background-Image-Wrapper">
                 <img src="images/emperor face with lion.png" alt="Background image error">
@@ -65,8 +88,7 @@
         </p>
     </div>
 
-    <!-- Early life -->
-    <div class="Early-Life-Box Story-Section">
+    <div class="Early-Life-Box Story-Section" id="Early-Life">
         <h2 class="Box-Title">Early Life</h2>
         <div class="Content-Box">
             <p>Shivaji was born in the hill-fort of Shivneri, near the city of Junnar, which is now in Pune district.
@@ -106,7 +128,7 @@
         </div>
     </div>
 
-    <div class="Bijapur-Sultanate Story-Section">
+    <div class="Bijapur-Sultanate Story-Section" id="Conflict-Bijapur-Sultanate">
         <h2 class="Box-Title">Conflict with Bijapur sultanate</h2>
         <div class="Content-Box">
             <p>
@@ -137,7 +159,7 @@
         </div>
     </div>
 
-    <div class="Afzal-Khan Story-Section">
+    <div class="Afzal-Khan Story-Section" id="Combat-Afzal-Khan">
         <h2 class="Box-Title">Combat with Afzal Khan</h2>
         <div class="Content-Box">
             <p>
@@ -176,7 +198,7 @@
         </div>
     </div>
 
-    <div class="Panhala-Sieze Story-Section">
+    <div class="Panhala-Sieze Story-Section" id="Siege-Panhala">
         <h2 class="Box-Title">Siege of Panhala</h2>
         <div class="Content-Box">
             <p>
@@ -198,7 +220,7 @@
         </div>
     </div>
 
-    <div class="Battle-Pavan-Khind Story-Section">
+    <div class="Battle-Pavan-Khind Story-Section" id="Battle-Pavan-Khind">
         <h2 class="Box-Title">Battle of Pavan Khind</h2>
         <div class="Content-Box">
             <p>
@@ -278,7 +300,7 @@
         </div>
     </div>
 
-    <div class="Mughal-Conflicts Story-Section">
+    <div class="Mughal-Conflicts Story-Section" id="Conflict-Mughal">
         <h2 class="Box-Title">Conflict with the Mughals</h2>
         <div class="Content-Box">
             <p>
@@ -296,7 +318,7 @@
         </div>
     </div>
 
-    <div class="Chakan-Battle Story-Section">
+    <div class="Chakan-Battle Story-Section" id="Battle-Chakan">
         <h2 class="Box-Title">Battle of Chakan</h2>
         <div class="Content-Box">
             <p>
@@ -326,7 +348,7 @@
         </div>
     </div>
 
-    <div class="Surat-Battle Story-Section">
+    <div class="Surat-Battle Story-Section" id="Battle-Surat">
         <h2 class="Box-Title">Battle of Surat</h2>
         <div class="Content-Box">
             <p>
@@ -385,7 +407,7 @@
         </div>
     </div>
 
-    <div class="Sinhagad-Battle Story-Section">
+    <div class="Sinhagad-Battle Story-Section" id="Battle-Sinhagad">
         <h2 class="Box-Title">Battle of Sinhagad</h2>
         <div class="Content-Box">
             <p>
@@ -451,7 +473,7 @@
         </div>
     </div>
 
-    <div class="Purandar-Battle Story-Section">
+    <div class="Purandar-Battle Story-Section" id="Battle-Purandar">
         <h2 class="Box-Title">Battle of Purandar</h2>
         <div class="Content-Box">
             <p>
@@ -494,7 +516,7 @@
         </div>
     </div>
 
-    <div class="Purandar-Trearty Story-Section">
+    <div class="Purandar-Trearty Story-Section" id="Treaty-Purandar">
         <h2 class="Box-Title">Treaty of Purandar</h2>
         <div class="Content-Box">
             <p>
@@ -527,7 +549,7 @@
         </div>
     </div>
 
-    <div class="Arrest-Agra Story-Section">
+    <div class="Arrest-Agra Story-Section" id="Arrest-Agra">
         <h2 class="Box-Title">Arrest in Agra and escape</h2>
         <div class="Content-Box">
             <p>
@@ -560,7 +582,7 @@
         </div>
     </div>
 
-    <div class="Reconquest Story-Section">
+    <div class="Reconquest Story-Section" id="Reconquest">
         <h2 class="Box-Title">Reconquest</h2>
         <div class="Content-Box">
             <p>
@@ -593,7 +615,7 @@
         </div>
     </div>
 
-    <div class="Battle-Umrani-Nesari Story-Section">
+    <div class="Battle-Umrani-Nesari Story-Section" id="Battle-Umrani-Nesari">
         <h2 class="Box-Title">Battles of Umrani and Nesari</h2>
         <div class="Content-Box">
             <p>
@@ -615,7 +637,7 @@
         </div>
     </div>
 
-    <div class="Coronation Story-Section">
+    <div class="Coronation Story-Section" id="Coronation">
         <h2 class="Box-Title">Coronation</h2>
         <div class="Content-Box">
             <p>
@@ -675,7 +697,7 @@
         </div>
     </div>
 
-    <div class="Expanding-South Story-Section">
+    <div class="Expanding-South Story-Section" id="Expanding-South">
         <h2 class="Box-Title">Kingdom expansion towards Southern Boundaries</h2>
         <div class="Content-Box">
             <p>
@@ -707,7 +729,7 @@
         </div>
     </div>
 
-    <div class="Death-Succession Story-Section">
+    <div class="Death-Succession Story-Section" id="Death">
         <h2 class="Box-Title">Death of lion and succession</h2>
         <div class="Content-Box">
             <p>
@@ -737,7 +759,7 @@
         </div>
     </div>
 
-    <div class="Commemorations Story-Section">
+    <div class="Commemorations Story-Section" id="Comemoration">
         <h2 class="Box-Title">Commemorations</h2>
         <div class="Content-Box">
             <p>
@@ -758,6 +780,124 @@
             </p>
         </div>
     </div>
+
+    <div class="After-Shivaji Story-Section" id="Succession">
+        <h2 class="Box-Title">Expansion of the Maratha Empire after Shivaji</h2>
+        <div class="Content-Box">
+            <p>
+                Shivaji left behind a state always at odds with the Mughals. Soon after his death, in 1681, Aurangzeb
+                launched an offensive in the South to capture territories held by the Marathas, the Bijapur-based
+                Adilshahi and Qutb Shahi of Golkonda respectively. He was successful in obliterating the Sultanates but
+                could not subdue the Marathas after spending 27 years in the Deccan. The period saw the capture,
+                torture, and execution of Sambhaji in 1689, and the Marathas offering strong resistance under the
+                leadership of Sambhaji's successor, Rajaram and then Rajaram's widow Tarabai. Territories changed hands
+                repeatedly between the Mughals and the Marathas; the conflict ended in defeat for the Mughals in 1707.
+            </p>
+            <p>
+                Shahu, a grandson of Shivaji and son of Sambhaji, was kept prisoner by Aurangzeb during the 27-year
+                period conflict. After the latter's death, his successor released Shahu. After a brief power struggle
+                over succession with his aunt Tarabai, Shahu ruled the Maratha Empire from 1707 to 1749. Early in his
+                reign, he appointed Balaji Vishwanath and later his descendants, as Peshwas (prime ministers) of the
+                Maratha Empire. The empire expanded greatly under the leadership of Balaji's son, Peshwa Bajirao I and
+                grandson, Peshwa Balaji Bajirao. At its peak, the Maratha empire stretched from Tamil Nadu[175] in the
+                south, to Peshawar (modern-day Khyber Pakhtunkhwa) in the north, and Bengal, in the east. In 1761, the
+                Maratha army lost the Third Battle of Panipat to Ahmed Shah Abdali of the Afghan Durrani Empire, which
+                halted their imperial expansion in northwestern India. Ten years after Panipat, Marathas regained
+                influence in North India during the rule of Madhavrao Peshwa.
+            </p>
+            <p>
+                In a bid to effectively manage the large empire, Shahu and the Peshwas gave semi-autonomy to the
+                strongest of the knights, creating the Maratha Confederacy.[177] They became known as Gaekwads of
+                Baroda, the Holkars of Indore and Malwa, the Scindias of Gwalior and Bhonsales of Nagpur. In 1775, the
+                East India Company intervened in a succession struggle in Pune, which resulted in the First
+                Anglo-Maratha War. The Marathas remained the pre-eminent power in India until their defeat by the
+                British in the Second and Third Anglo-Maratha wars (1805–1818), which left the company the dominant
+                power in most of India.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let page_url = document.URL.split('#')[0];
+        let page_links_nav_box = document.querySelector('#Page-Links');
+        let chapters = {
+            1: { "id": "Name", "name": "Top" },
+            2: { "id": "Caption", "name": "Lead Line" },
+            3: { "id": "Introduction", "name": "Introduction" },
+            4: { "id": "Early-Life", "name": "Early Life" },
+            5: { "id": "Conflict-Bijapur-Sultanate", "name": "Conflict with Bijapur sultanate" },
+            6: { "id": "Combat-Afzal-Khan", "name": "Combat with Afzal Khan" },
+            7: { "id": "Siege-Panhala", "name": "Siege of Panhala" },
+            8: { "id": "Battle-Pavan-Khind", "name": "Battle of Pavan Khind" },
+            9: { "id": "Conflict-Mughal", "name": "Conflict with the Mughals" },
+            10: { "id": "Battle-Chakan", "name": "Battle of Chakan" },
+            11: { "Id": "Battle-Surat", "name": "Battle of Surat" },
+            12: { "id": "Battle-Sinhagad", "name": "Battle of Sinhagad" },
+            13: { "id": "Battle-Purandar", "name": "Battle of Purandar" },
+            14: { "id": "Treaty-Purandar", "name": "Treaty of Purandar" },
+            15: { "id": "Arrest-Agra", "name": "Arrest in Agra and escape" },
+            16: { "id": "Reconquest", "name": "Reconquest" },
+            17: { "id": "Battle-Umrani-Nesari", "name": "Battles of Umrani and Nesari" },
+            18: { "id": "Coronation", "name": "Coronation" },
+            19: { "id": "Expanding-South", "name": "Kingdom expansion towards Southern Boundaries" },
+            20: { "id": "Death", "name": "Death of lion and succession" },
+            21: { "id": "Comemoration", "name": "Comemorations" },
+            22: { "id": "Succession", "name": "Expansion of the Maratha Empire after Shivaji" }
+        }
+        let total_chapters = Object.keys(chapters).length;
+        for (let i = 1; i <= total_chapters; i += 1) {
+            let li_ele = document.createElement("li");
+            let div_ele = document.createElement("div");
+            let a_ele = document.createElement("a");
+
+            a_ele.href = "#" + chapters[i]["id"];
+            a_ele.innerHTML = chapters[i]["name"];
+
+            a_ele.addEventListener('click', rediect);
+
+            div_ele.appendChild(a_ele);
+            li_ele.appendChild(div_ele);
+            page_links_nav_box.appendChild(li_ele);
+        };
+
+        function toggle_menu(event, action) {
+            let event_toggle_button = event.target;
+            let menu_container = document.getElementById("Menu-Container");
+            let menu_container_btn = document.getElementById("Menu-Container-Btn");
+            let close_container_btn = document.getElementById("Close-Container-Btn");
+
+            if (action == "open") {
+                menu_container_btn.classList.remove("Active-Container");
+                close_container_btn.classList.remove("In-Active-Container");
+                menu_container.classList.remove("In-Active-Container");
+
+                menu_container_btn.classList.add("In-Active-Container");
+                close_container_btn.classList.add("Active-Container");
+                menu_container.classList.add("Active-Container");
+            }
+            if (action == "close") {
+                menu_container_btn.classList.remove("In-Active-Container");
+                close_container_btn.classList.remove("Active-Container");
+                menu_container.classList.remove("Active-Container");
+
+                menu_container_btn.classList.add("Active-Container");
+                close_container_btn.classList.add("In-Active-Container");
+                menu_container.classList.add("In-Active-Container");
+            }
+        }
+
+        function rediect(event) {
+            event.preventDefault();
+
+            let event_btn = event.target;
+            let btn_href = event_btn.getAttribute("href");
+
+            toggle_menu(event, 'close');
+
+            //window.open(btn_href);
+            document.querySelector(btn_href).scrollIntoView();
+        }
+    </script>
 
 </body>
 
